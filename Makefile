@@ -98,6 +98,9 @@ windows-x86:
 run:
 	@ LOG_DATE_TIME=1 go run main.go -debug
 
+migrate:
+	@ LOG_DATE_TIME=1 go run main.go -migrate
+
 clean:
 	@ rm -f $(APP)-* $(APP) $(APP)*.rpm $(APP)*.deb
 

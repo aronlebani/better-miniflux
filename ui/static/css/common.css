@@ -755,6 +755,12 @@ template {
     touch-action: pan-y;
 }
 
+.item-image img {
+    width: 50%;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
 .hide-read-items .item-status-read:not(.current-item) {
     display: none;
 }
