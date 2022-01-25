@@ -13,6 +13,7 @@ import (
 	"miniflux.app/model"
 	"miniflux.app/ui/session"
 	"miniflux.app/ui/view"
+    "miniflux.app/utils"
 
 	servertiming "github.com/mitchellh/go-server-timing"
 )
@@ -60,6 +61,10 @@ func (h *handler) showUnreadPage(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	m.Stop()
+
+    for _, entry := range entries {
+        entry.ImageHTML = utils.GetImgTag(entry.Content)
+    }
 
 	view.Set("entries", entries)
 	view.Set("pagination", getPagination(route.Path(h.router, "unread"), countUnread, offset, user.EntriesPerPage))
