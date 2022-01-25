@@ -13,7 +13,6 @@ import (
 	"miniflux.app/model"
 	"miniflux.app/ui/session"
 	"miniflux.app/ui/view"
-    "miniflux.app/utils"
 )
 
 func (h *handler) showFeedEntriesPage(w http.ResponseWriter, r *http.Request) {
@@ -55,10 +54,6 @@ func (h *handler) showFeedEntriesPage(w http.ResponseWriter, r *http.Request) {
 		html.ServerError(w, r, err)
 		return
 	}
-
-    for _, entry := range entries {
-        entry.ImageHTML = utils.GetImgTag(entry.Content)
-    }
 
 	sess := session.New(h.store, request.SessionID(r))
 	view := view.New(h.tpl, r, sess)

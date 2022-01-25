@@ -14,6 +14,7 @@ import (
 
 	"miniflux.app/model"
 	"miniflux.app/timezone"
+    "miniflux.app/utils"
 )
 
 // EntryQueryBuilder builds a SQL query to fetch entries.
@@ -332,6 +333,8 @@ func (e *EntryQueryBuilder) GetEntries() (model.Entries, error) {
 		} else {
 			entry.Feed.Icon.IconID = 0
 		}
+
+        entry.ImageHTML = utils.GetImgTag(entry.Content)
 
 		// Make sure that timestamp fields contains timezone information (API)
 		entry.Date = timezone.Convert(tz, entry.Date)
