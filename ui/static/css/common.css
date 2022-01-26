@@ -755,8 +755,10 @@ template {
     touch-action: pan-y;
 }
 
-.item-image img {
+.item-image img,
+.item-image iframe {
     width: 50%;
+    height: 200px;
     border-radius: 8px;
     margin-top: 8px;
 }

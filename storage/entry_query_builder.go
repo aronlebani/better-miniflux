@@ -334,7 +334,7 @@ func (e *EntryQueryBuilder) GetEntries() (model.Entries, error) {
 			entry.Feed.Icon.IconID = 0
 		}
 
-        entry.ImageHTML = utils.GetImgTag(entry.Content)
+        entry.ImageHTML = utils.GetMediaElement(entry.Content)
 
 		// Make sure that timestamp fields contains timezone information (API)
 		entry.Date = timezone.Convert(tz, entry.Date)
