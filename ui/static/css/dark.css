@@ -4,16 +4,16 @@
     --body-background: #222;
     --hr-border-color: #555;
     --title-color: #aaa;
-    --link-color: #aaa;
-    --link-focus-color: #ddd;
-    --link-hover-color: #ddd;
-    --link-visited-color: #f083e4;
+    --link-color: #3366CC;
+    --link-focus-color: red;
+    --link-hover-color: #333;
+    --link-visited-color: purple;
 
     --header-list-border-color: #333;
-    --header-link-color: #ddd;
-    --header-link-focus-color: rgba(82, 168, 236, 0.85);
-    --header-link-hover-color: rgba(82, 168, 236, 0.85);
-    --header-active-link-color: #9b9494;
+    --header-link-color: #444;
+    --header-link-focus-color: #888;
+    --header-link-hover-color: #888;
+    --header-active-link-color: #444;
 
     --page-header-title-color: #aaa;
     --page-header-title-border-color: #333;
